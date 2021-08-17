@@ -10,3 +10,6 @@ class BusinessContact(BaseContact):
         self.stanowisko = stanowisko
         self.nazwa_firmy = nazwa_firmy
         self.tel_sluzbowy = tel_sluzbowy
+    def __str__ (self):
+        return f"{self.imie} {self.nazwisko} {self.tel} {self.stanowisko} {self.nazwa_firmy} {self.tel_sluzbowy}"
+
