@@ -10,7 +10,7 @@ class BaseContact:
         return f"Wybieram numer {self.tel} i dzwonię do {self.imie}"
     @property
     def label_length(self):           
-        return f"długość imienia i nazwiska razem to {len(self.imie)+len(self.nazwisko)+1} "
+        return f"Długość imienia i nazwiska razem to {len(self.imie)+len(self.nazwisko)+1} "
 class BusinessContact(BaseContact):
     def __init__(self, stanowisko, nazwa_firmy, tel_sluzbowy, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -24,12 +24,12 @@ class BusinessContact(BaseContact):
         return f"Wybieram numer {self.tel_sluzbowy} i dzwonię do {self.imie}"
     @property
     def label_length(self):           
-        return f"długość imienia i nazwiska razem to {len(self.imie)+len(self.nazwisko)+1} "
+        return f"Długość imienia i nazwiska razem to {len(self.imie)+len(self.nazwisko)+1} "
 
-p1=BaseContact(imie="Theresa", nazwisko="McKenzie", tel=4625145216)
-p2=BaseContact(imie="Vickie", nazwisko="Koelpin", tel=18968073059)
+p1=BaseContact(imie="Theresa", nazwisko="McKenzie", tel="4625145216")
+p2=BaseContact(imie="Vickie", nazwisko="Koelpin", tel="18968073059")
 
-buissness_p1=BusinessContact(imie="Theresa", nazwisko="McKenzie", tel=4625145216, stanowisko="Internal Research Analyst",nazwa_firmy="Bahringer Inc", tel_sluzbowy=8454707059)
-buissness_p2=BusinessContact(imie="Vickie", nazwisko="Koelpin", tel=18968073059, stanowisko="Forward Branding Planner",nazwa_firmy="Bauch - Hickle", tel_sluzbowy=8866965686)
+buissness_p1=BusinessContact(imie="Theresa", nazwisko="McKenzie", tel="4625145216", stanowisko="Internal Research Analyst",nazwa_firmy="Bahringer Inc", tel_sluzbowy="8454707059")
+buissness_p2=BusinessContact(imie="Vickie", nazwisko="Koelpin", tel="18968073059", stanowisko="Forward Branding Planner",nazwa_firmy="Bauch - Hickle", tel_sluzbowy="8866965686")
 
 print(buissness_p1.label_length)
