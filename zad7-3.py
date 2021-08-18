@@ -1,3 +1,5 @@
+from faker import Faker
+
 class BaseContact:
     def __init__(self, imie, nazwisko, tel):
         self.imie = imie
@@ -32,4 +34,4 @@ p2=BaseContact(imie="Vickie", nazwisko="Koelpin", tel="18968073059")
 buissness_p1=BusinessContact(imie="Theresa", nazwisko="McKenzie", tel="4625145216", stanowisko="Internal Research Analyst",nazwa_firmy="Bahringer Inc", tel_sluzbowy="8454707059")
 buissness_p2=BusinessContact(imie="Vickie", nazwisko="Koelpin", tel="18968073059", stanowisko="Forward Branding Planner",nazwa_firmy="Bauch - Hickle", tel_sluzbowy="8866965686")
 
-print(buissness_p1.label_length)
+
